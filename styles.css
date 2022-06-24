@@ -1,0 +1,8 @@
+.box {
+	position: absolute;
+	width: 550px;
+	height: 260px;
+	left: 0px;
+	top: 0px;
+	background: linear-gradient(246.26deg, #585DFE 0%, #FB3796 100%);
+}
