@@ -1,8 +1,50 @@
-.box {
+#box-top {
 	position: absolute;
 	width: 550px;
-	height: 260px;
-	left: 0px;
-	top: 0px;
+	height: 200px;
+	left: 83px;
+	top: 83px;
 	background: linear-gradient(246.26deg, #585DFE 0%, #FB3796 100%);
 }
+
+#box-bottom {
+	position: absolute;
+	width: 550px;
+	height: 350px;
+	left: 83px;
+	top: 283px;
+	background: #FBF7EE;
+}
+
+body {
+	font-family:  Inter, sans-serif;
+}
+
+h1 {
+
+}
+
+h2 {
+	font-weight:  800;
+	font-size: 22px;
+	line-height: 38px;
+	color: #fff;
+	text-align: center;
+}
+
+#number-to-convert {
+	font-size: 97.5723px;
+	line-height: 24px;
+	font-weight: 800;
+	text-align: center;
+	color: #fff;
+}
+
+.unit-labels {
+	text-align: center;
+}
+
+.unit-values {
+	text-align: center;
+}
+
