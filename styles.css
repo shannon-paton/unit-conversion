@@ -21,7 +21,8 @@ body {
 }
 
 h1 {
-
+	font-size: 22px;
+	font-weight: 500;
 }
 
 #box-heading {
