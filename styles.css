@@ -1,7 +1,7 @@
 #box-top {
 	position: absolute;
 	width: 550px;
-	height: 200px;
+	height: 260px;
 	left: 83px;
 	top: 83px;
 	background: linear-gradient(246.26deg, #585DFE 0%, #FB3796 100%);
@@ -10,9 +10,9 @@
 #box-bottom {
 	position: absolute;
 	width: 550px;
-	height: 350px;
+	height: 290px;
 	left: 83px;
-	top: 283px;
+	top: 343px;
 	background: #FBF7EE;
 }
 
@@ -21,6 +21,12 @@ body {
 }
 
 h1 {
+
+}
+
+#box-heading {
+	position: relative;
+	top: 25px;
 
 }
 
@@ -34,17 +40,27 @@ h2 {
 
 #number-to-convert {
 	font-size: 97.5723px;
-	line-height: 24px;
+	line-height: 1px;
 	font-weight: 800;
 	text-align: center;
 	color: #fff;
 }
 
+.conversion-results {
+	padding: 5px;
+}
+
 .unit-labels {
 	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
 }
 
 .unit-values {
 	text-align: center;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
 }
 
