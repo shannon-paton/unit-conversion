@@ -44,7 +44,12 @@ h2 {
 	font-weight: 800;
 	text-align: center;
 	color: #fff;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	width: 550px;
 }
+
 
 .conversion-results {
 	padding: 5px;
