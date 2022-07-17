@@ -33,6 +33,24 @@ function convertGallonsToLiters(gallons) {
 	return liters
 }
 
+// convert kilos to pounds
+
+function convertKilostoPounds(kilos) {
+	var pounds = kilos * 2.204623
+	pounds = pounds.toFixed(3)
+	return pounds
+}
+
+// convert pounds to kilos
+
+function convertPoundstoKilos(pounds) {
+	var kilos = pounds / 2.204623
+	kilos = kilos.toFixed(3)
+	return kilos
+}
+
+
+
 // update values when input changes
 
 function updateValues() {
@@ -79,8 +97,9 @@ function updateVolume(number) {
 	gallonsInitialValue.innerText = number
 	var liters = convertGallonsToLiters(number)
 	litersConvertedValue.innerText = liters
-
 }
+
+
 
 
 
