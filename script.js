@@ -40,12 +40,12 @@ function updateValues() {
 
 	if ( numberToConvert.value != "" ) { // if the string is not empty
 		updateLength(inputNumber) // update length (feet/meters) using inputted number
-		updateMass(inputNumber)
+		updateVolume(inputNumber)
 	}
 
 	else {
 		updateLength(0) // else run function with 0 as input
-		updateMass(0)
+		updateVolume(0)
 	}
 
 }
@@ -66,7 +66,7 @@ function updateLength(number) { // number is parameter
 	metersConvertedValue.innerText = meters
 }
 
-function updateMass(number) {
+function updateVolume(number) {
 	var litersInitialValue = document.getElementById('liters-initial-value')
 	var gallonsConvertedValue = document.getElementById('gallons-converted-value')
 	var gallonsInitialValue = document.getElementById('gallons-initial-value')
