@@ -22,18 +22,17 @@ function updateValues() {
 
 	if ( numberToConvert.value != "" ) { // if the string is not empty
 		updateLength(inputNumber) // update length (feet/meters) using inputted number
-
+		updateMass(inputNumber)
 	}
 
 	else {
 		updateLength(0) // else run function with 0 as input
-		
+		updateMass(0)
 	}
 
 }
 
 function updateLength(number) { // number is parameter
-
 	var metersInitialValue = document.getElementById('meters-initial-value')
 	var feetConvertedValue = document.getElementById('feet-converted-value') // gets span of converted value
 	var feetInitialValue = document.getElementById('feet-initial-value')
@@ -48,6 +47,8 @@ function updateLength(number) { // number is parameter
 	var meters = convertFeetToMeters(number)
 	metersConvertedValue.innerText = meters
 }
+
+
 
 
 
