@@ -1,5 +1,5 @@
 var numberToConvert = document.getElementById('number-to-convert');
-numberToConvert.addEventListener('change', updateValues); //onchange, run the function
+numberToConvert.addEventListener('input', updateValues); //onchange, run the function
 
 
 // function to convert meters to feet
@@ -16,8 +16,8 @@ function updateValues() {
 	metersInitialValue.innerText = numberToConvert.value // updates text of value to the number typed in the top
 
 	var feetConvertedValue = document.getElementById('feet-converted-value') // gets span of converted value
-	var calculatedFeetConvertedValue = convertMetersToFeet(parseFloat(numberToConvert.value)) // 
-	feetConvertedValue.innerText = calculatedFeetConvertedValue
+	var calculatedFeetConvertedValue = convertMetersToFeet(parseFloat(numberToConvert.value)) // converts to feet
+	feetConvertedValue.innerText = calculatedFeetConvertedValue // replace inner text with converted value
 
 }
 
