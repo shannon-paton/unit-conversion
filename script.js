@@ -1,20 +1,26 @@
 var numberToConvert = document.getElementById('number-to-convert');
 numberToConvert.addEventListener('change', updateValues); //onchange, run the function
 
-function updateValues() {
-	var metersInitialValue = document.getElementById('meters-initial-value')
-	metersInitialValue.innerText = numberToConvert.value
-	var feetConvertedValue = document.getElementById('feet-converted-value')
-	console.log(feetConvertedValue)
-}
 
-// convert meters to feet
+// function to convert meters to feet
 
 function convertMetersToFeet(meters) {
 	var feet = meters * 3.280839895
 	feet = feet.toFixed(3)
-	console.log(feet)
+	return feet
 }
+
+function updateValues() {
+
+	var metersInitialValue = document.getElementById('meters-initial-value') // gets span of initial value
+	metersInitialValue.innerText = numberToConvert.value // updates text of value to the number typed in the top
+
+	var feetConvertedValue = document.getElementById('feet-converted-value') // gets span of converted value
+	var calculatedFeetConvertedValue = convertMetersToFeet(parseFloat(numberToConvert.value)) // 
+	feetConvertedValue.innerText = calculatedFeetConvertedValue
+
+}
+
 
 
 
