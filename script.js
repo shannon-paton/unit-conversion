@@ -35,7 +35,7 @@ function convertGallonsToLiters(gallons) {
 
 // convert kilos to pounds
 
-function convertKilostoPounds(kilos) {
+function convertKilosToPounds(kilos) {
 	var pounds = kilos * 2.204623
 	pounds = pounds.toFixed(3)
 	return pounds
@@ -43,7 +43,7 @@ function convertKilostoPounds(kilos) {
 
 // convert pounds to kilos
 
-function convertPoundstoKilos(pounds) {
+function convertPoundsToKilos(pounds) {
 	var kilos = pounds / 2.204623
 	kilos = kilos.toFixed(3)
 	return kilos
@@ -59,11 +59,13 @@ function updateValues() {
 	if ( numberToConvert.value != "" ) { // if the string is not empty
 		updateLength(inputNumber) // update length (feet/meters) using inputted number
 		updateVolume(inputNumber)
+		updateMass(inputNumber)
 	}
 
 	else {
 		updateLength(0) // else run function with 0 as input
 		updateVolume(0)
+		updateMass(0)
 	}
 
 }
@@ -97,6 +99,21 @@ function updateVolume(number) {
 	gallonsInitialValue.innerText = number
 	var liters = convertGallonsToLiters(number)
 	litersConvertedValue.innerText = liters
+}
+
+function updateMass(number) {
+	var kilosInitialValue = document.getElementById('kilos-initial-value')
+	var poundsConvertedValue = document.getElementById('pounds-converted-value')
+	var poundsInitialValue = document.getElementById('pounds-initial-value')
+	var kilosConvertedValue = document.getElementById('kilos-converted-value')
+
+	kilosInitialValue.innerText = number
+	var pounds = convertKilosToPounds(number)
+	poundsConvertedValue.innerText = pounds
+
+	poundsInitialValue.innerText = number
+	var kilos = convertPoundsToKilos(number)
+	kilosConvertedValue.innerText = kilos
 }
 
 
