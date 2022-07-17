@@ -1,7 +1,7 @@
 var numberToConvert = document.getElementById('number-to-convert');
-numberToConvert.addEventListener('input', updateValues); //onchange, run the function
+numberToConvert.addEventListener('input', updateValues); //oninput, run the function
 
-// function to convert meters to feet
+// convert meters to feet
 
 function convertMetersToFeet(meters) {
 	var feet = meters * 3.280839895
@@ -9,13 +9,31 @@ function convertMetersToFeet(meters) {
 	return feet
 }
 
-// function to convert feet to meters
+// convert feet to meters
 
 function convertFeetToMeters(feet) {
 	var meters = feet / 3.280839895
 	meters = meters.toFixed(3)
 	return meters
 }
+
+// convert liters to gallons
+
+function convertLitersToGallons(liters) {
+	var gallons = liters * 0.2641720524
+	gallons = gallons.toFixed(3)
+	return gallons
+}
+
+// convert gallons to liters
+
+function convertGallonsToLiters(gallons) {
+	var liters = gallons / 0.2641720524
+	liters = liters.toFixed(3)
+	return liters
+}
+
+// update values when input changes
 
 function updateValues() {
 	let inputNumber = parseFloat(numberToConvert.value)
@@ -48,6 +66,21 @@ function updateLength(number) { // number is parameter
 	metersConvertedValue.innerText = meters
 }
 
+function updateMass(number) {
+	var litersInitialValue = document.getElementById('liters-initial-value')
+	var gallonsConvertedValue = document.getElementById('gallons-converted-value')
+	var gallonsInitialValue = document.getElementById('gallons-initial-value')
+	var litersConvertedValue = document.getElementById('liters-converted-value')
+
+	litersInitialValue.innerText = number
+	var gallons = convertLitersToGallons(number)
+	gallonsConvertedValue.innerText = gallons
+
+	gallonsInitialValue.innerText = number
+	var liters = convertGallonsToLiters(number)
+	litersConvertedValue.innerText = liters
+
+}
 
 
 
