@@ -1,9 +1,7 @@
+var numberToConvert = document.getElementById('number-to-convert');
+numberToConvert.addEventListener('change', updateValues);
+
 function updateValues() {
-	var numberToConvert = document.getElementById('number-to-convert').value;
 	var metersInitialValue = document.getElementById('meters-initial-value')
-	console.log(numberToConvert)
-	metersInitialValue.replaceWith(numberToConvert)
+	metersInitialValue.innerText = numberToConvert.value
 }
-
-
-
