@@ -12,18 +12,19 @@ function convertMetersToFeet(meters) {
 function updateValues() {
 
 	var metersInitialValue = document.getElementById('meters-initial-value')
-	
+	var feetConvertedValue = document.getElementById('feet-converted-value') // gets span of converted value
+
 	if ( numberToConvert.value != "" ) {
 		 // gets span of initial value
 		metersInitialValue.innerText = numberToConvert.value // updates text of value to the number typed in the top
 
-		var feetConvertedValue = document.getElementById('feet-converted-value') // gets span of converted value
 		var calculatedFeetConvertedValue = convertMetersToFeet(parseFloat(numberToConvert.value)) // converts to feet
 		feetConvertedValue.innerText = calculatedFeetConvertedValue // replace inner text with converted value
 	}
 
 	else {
 		metersInitialValue.innerText = '0'
+		feetConvertedValue.innerText = '0.000'
 	}
 
 }
