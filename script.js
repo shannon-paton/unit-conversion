@@ -115,12 +115,3 @@ function updateMass(number) {
 	var kilos = convertPoundsToKilos(number)
 	kilosConvertedValue.innerText = kilos
 }
-
-
-
-
-
-
-
-
-
