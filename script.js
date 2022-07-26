@@ -54,7 +54,7 @@ function convertPoundsToKilos(pounds) {
 // update values when input changes
 
 function updateValues() {
-	let inputNumber = parseFloat(numberToConvert.value)
+	let inputNumber = Number(numberToConvert.value) // converts value to number from string
 
 	if ( numberToConvert.value != "" ) { // if the string is not empty
 		updateLength(inputNumber) // update length (feet/meters) using inputted number
